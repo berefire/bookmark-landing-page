@@ -40,12 +40,12 @@
   <script src="./src/js/main.js" defer type="module"></script>
 </head>
 
-<body>
-  <header>
+<body class="bg-white font-body">
+  <header class="flex flex-row justify-between pbs-10 pbe-9 px-8 md:px-20 md:pbe-20">
     <a href="#">
       <img src="/assets/images/logo-bookmark.svg" alt="Bookmark" width="148" height="25" />
     </a>
-    <nav aria-label="Desktop navigation">
+    <nav aria-label="Desktop navigation" hidden>
       <ul role="list">
         <li><a href="#features">Features</a></li>
         <li><a href="#pricing">Pricing</a></li>
@@ -60,15 +60,15 @@
       </svg>
     </button>
   </header>
-  <main>
-    <section>
-      <header>
-        <h1> A Simple Bookmark Manager</h1>
-        <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
+  <main class="flex flex-col">
+    <section class="flex flex-col-reverse gap-12">
+      <header class="px-8 flex flex-col gap-6">
+        <h1 class="font-bold text-3xl text-center text-blue-950"> A Simple Bookmark Manager</h1>
+        <p class="text-base text-gray-400 font-normal">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
           load instantly. Try it for free.</p>
-        <div>
-          <a href="#">Get it on Chrome</a>
-          <a href="#">Get it on Firefox</a>
+        <div class="flex flex-row gap-4">
+          <a href="#" class="btn btn-primary">Get it on Chrome</a>
+          <a href="#" class="btn btn-secondary">Get it on Firefox</a>
         </div>
       </header>
       <div class="relative">
@@ -78,6 +78,9 @@
           class="relative z-10" />
       </div>
     </section>
+
+
+
     <section id="features" aria-labelledby="features-title">
       <div class="container">
 
