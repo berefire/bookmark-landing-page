@@ -35,58 +35,119 @@
     content="Responsive Bookmark landing page built with Tailwind CSS, JavaScript, and Vite." />
   <meta name="twitter:image" content="https://your-domain.com/images/preview.jpg" />
   <meta name="twitter:image:alt" content="Preview of the Bookmark Landing Page website" />
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
   <script src="./src/js/main.js" defer type="module"></script>
 </head>
 
 <body>
   <header>
-
-
+    <a href="#">
+      <img src="/assets/images/logo-bookmark.svg" alt="Bookmark Logo" width="148" height="25" />
+    </a>
+    <nav aria-label="Desktop navigation">
+      <ul role="list">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+    <button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open mobile menu">
+      <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="15"
+        viewBox="0 0 18 15" fill="none">
+        <path fill="#242A45" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z" />
+      </svg>
+    </button>
   </header>
-  Features
-  Pricing
-  Contact
-  Login
+  <main>
+    <section>
+      <div class="relative">
+        <div class="absolute right-0 bottom-0 h-52 w-80 rounded-bl-full rounded-tl-full bg-blue-600"></div>
+        <img src="/assets/images/illustration-hero.svg"
+          alt="Illustration of a person using a computer to manage bookmarks" width="500" height="400"
+          class="relative z-10" />
+      </div>
+      <div>
+        <h1> A Simple Bookmark Manager</h1>
+        <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
+          load instantly. Try it for free.</p>
+        <div>
+          <a href="#">Get it on Chrome</a>
+          <a href="#">Get it on Firefox</a>
+        </div>
+      </div>
+    </section>
 
-  A Simple Bookmark Manager
+    <section id="features" aria-labelledby="features-title">
+      <div class="container">
 
-  A clean and simple interface to organize your favourite websites. Open a new
-  browser tab and see your sites load instantly. Try it for free.
+        <header>
+          <h2 id="features-title">Features</h2>
 
-  Get it on Chrome
-  Get it on Firefox
+          <p>
+            Our aim is to make it quick and easy for you to access your favourite
+            websites. Your bookmarks sync between your devices so you can access
+            them on the go.
+          </p>
+        </header>
 
-  Features
+        <div role="tablist" aria-label="Bookmark features">
 
-  Our aim is to make it quick and easy for you to access your favourite websites.
-  Your bookmarks sync between your devices so you can access them on the go.
+          <button id="tab-bookmarking" type="button" role="tab" aria-selected="true" aria-controls="panel-bookmarking">
+            Simple Bookmarking
+          </button>
 
-  Simple Bookmarking
-  Speedy Searching
-  Easy Sharing
+          <button id="tab-searching" type="button" role="tab" aria-selected="false" aria-controls="panel-searching">
+            Speedy Searching
+          </button>
 
-  Bookmark in one click
+          <button id="tab-sharing" type="button" role="tab" aria-selected="false" aria-controls="panel-sharing">
+            Easy Sharing
+          </button>
 
-  Organize your bookmarks however you like. Our simple drag-and-drop interface
-  gives you complete control over how you manage your favourite sites.
+        </div>
 
-  More Info
+        <div>
 
-  Intelligent search
+          <article id="panel-bookmarking" role="tabpanel" aria-labelledby="tab-bookmarking">
 
-  Our powerful search feature will help you find saved sites in no time at all.
-  No need to trawl through all of your bookmarks.
+            <div>
 
-  More Info
+              <div aria-hidden="true"></div>
 
-  Share your bookmarks
+              <picture>
 
-  Easily share your bookmarks and collections with others. Create a shareable
-  link that you can send at the click of a button.
+                <img src="/assets/images/illustration-features-tab-1.svg" alt="Bookmark manager dashboard">
 
-  More Info
+              </picture>
+
+            </div>
+
+            <div>
+
+              <h3>Bookmark in one click</h3>
+
+              <p>
+                Organize your bookmarks however you like. Our simple drag-and-drop
+                interface gives you complete control over how you manage your
+                favourite sites.
+              </p>
+
+              <a href="#">
+                More Info
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
 
   Download the extension
 
