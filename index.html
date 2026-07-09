@@ -43,7 +43,7 @@
 <body>
   <header>
     <a href="#">
-      <img src="/assets/images/logo-bookmark.svg" alt="Bookmark Logo" width="148" height="25" />
+      <img src="/assets/images/logo-bookmark.svg" alt="Bookmark" width="148" height="25" />
     </a>
     <nav aria-label="Desktop navigation">
       <ul role="list">
@@ -62,13 +62,7 @@
   </header>
   <main>
     <section>
-      <div class="relative">
-        <div class="absolute right-0 bottom-0 h-52 w-80 rounded-bl-full rounded-tl-full bg-blue-600"></div>
-        <img src="/assets/images/illustration-hero.svg"
-          alt="Illustration of a person using a computer to manage bookmarks" width="500" height="400"
-          class="relative z-10" />
-      </div>
-      <div>
+      <header>
         <h1> A Simple Bookmark Manager</h1>
         <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
           load instantly. Try it for free.</p>
@@ -76,9 +70,14 @@
           <a href="#">Get it on Chrome</a>
           <a href="#">Get it on Firefox</a>
         </div>
+      </header>
+      <div class="relative">
+        <div class="absolute right-0 bottom-0 h-52 w-80 rounded-bl-full rounded-tl-full bg-blue-600"></div>
+        <img src="/assets/images/illustration-hero.svg"
+          alt="Illustration of a person using a computer to manage bookmarks" width="500" height="400"
+          class="relative z-10" />
       </div>
     </section>
-
     <section id="features" aria-labelledby="features-title">
       <div class="container">
 
@@ -142,81 +141,136 @@
 
           </article>
 
+          <article id="panel-searching" role="tabpanel" aria-labelledby="tab-searching" hidden></article>
+          <article id="panel-sharing" role="tabpanel" aria-labelledby="tab-sharing" hidden></article>
+
         </div>
 
       </div>
     </section>
+
+    <section>
+      <header>
+        <h2>Download the extension</h2>
+        <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve
+          got a favourite you’d like us to prioritize.</p>
+      </header>
+
+      <ul role="list">
+        <li>
+          <article>
+            <img src="/assets/images/logo-chrome.svg" alt="Google Chrome" width="32" height="32" />
+            <h3>Add to Chrome</h3>
+            <p>Minimum version 62</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+              <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
+                d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+            </svg>
+            <a href="#">Add & Install Extension</a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="/assets/images/logo-firefox.svg" alt="Mozilla Firefox" width="32" height="32" />
+            <h3>Add to Firefox</h3>
+            <p>Minimum version 55</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+              <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
+                d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+            </svg>
+            <a href="#">Add & Install Extension</a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="/assets/images/logo-opera.svg" alt="Opera" width="32" height="32" />
+            <h3>Add to Opera</h3>
+            <p>Minimum version 46</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+              <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
+                d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+            </svg>
+            <a href="#">Add & Install Extension</a>
+          </article>
+        </li>
+      </ul>
+
+    </section>
+    <section>
+      <div>
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+      </div>
+      <div>
+        <details>
+          <summary>What is Bookmark?</summary>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla.
+            Phasellus blandit ipsum quis quam ornare mattis.</p>
+        </details>
+        <details>
+          <summary>How can I request a new browser?</summary>
+          <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
+            imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+            ligula. Suspendisse imperdiet.</p>
+        </details>
+        <details>
+          <summary>Is there a mobile app?</summary>
+          <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna
+            vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et
+            ultricies bibendum.</p>
+        </details>
+        <details>
+          <summary>What about other Chromium browsers?</summary>
+          <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque
+            eget nisl gravida pellentesque non ut velit.</p>
+        </details>
+
+        <a href="#"> More Info</a>
+      </div>
+    </section>
+    <section>
+      <div>
+        <p>35,000+ already joined</p>
+        <h2>Stay up-to-date with what we’re doing</h2>
+        <form novalidate>
+          <label for="email-address">Email address</label>
+          <input type="email" id="email-address" name="email-address" placeholder="Enter your email address"
+            autocomplete="email" inputmode="email" required />
+          <button type="submit">Contact Us</button>
+        </form>
+      </div>
+    </section>
   </main>
+  <footer>
+    <div>
+      <a href="#">
+        <img src="/assets/images/logo-bookmark.svg" alt="Bookmark" width="148" height="25" />
+      </a>
+      <nav aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <ul role="list" aria-label="Social media links">
+        <li><a href="#"><img src="/assets/icons/icon-facebook.svg" alt="Facebook" width="20" height="20" /></a>
+        </li>
+        <li><a href="#"><img src="/assets/icons/icon-twitter.svg" alt="Twitter" width="20" height="20" /></a></li>
+      </ul>
+    </div>
+    <p>
+      Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        rel="noopener noreferrer" aria-label="Frontend Mentor (opens in a new tab)">Frontend Mentor <span
+          aria-hidden="true" class="external-icon">🔗</span></a>.
+      Coded by <a class="link" target="_blank" rel="noopener noreferrer" aria-label="Author (opens in a new tab)"
+        href="#">Berefire</a>.
+    </p>
 
-
-  Download the extension
-
-  We’ve got more browsers in the pipeline. Please do let us know if you’ve
-  got a favourite you’d like us to prioritize.
-
-  Add to Chrome
-  Minimum version 62
-  Add & Install Extension
-
-  Add to Firefox
-  Minimum version 55
-  Add & Install Extension
-
-  Add to Opera
-  Minimum version 46
-  Add & Install Extension
-
-  Frequently Asked Questions
-
-  Here are some of our FAQs. If you have any other questions you’d like
-  answered please feel free to email us.
-
-  <!-- Question 1 -->
-  What is Bookmark?
-
-  <!-- Answer 1 -->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-
-  <!-- Question 2 -->
-  How can I request a new browser?
-
-  <!-- Answer 2 -->
-  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-  Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-  ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-  <!-- Question 3 -->
-  Is there a mobile app?
-
-  <!-- Answer 3 -->
-  Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
-  urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
-  sollicitudin ex et ultricies bibendum.
-
-  <!-- Question 4 -->
-  What about other Chromium browsers?
-
-  <!-- Answer 4 -->
-  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
-  vitae neque eget nisl gravida pellentesque non ut velit.
-
-  More Info
-
-  35,000+ already joined
-
-  Stay up-to-date with what we’re doing
-
-  Contact Us
-
-  Features
-  Pricing
-  Contact
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
   </footer>
 </body>
 
