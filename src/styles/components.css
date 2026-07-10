@@ -1,13 +1,65 @@
 @layer components {
-    .btn {
-        @apply inline-flex items-center justify-center rounded-lg px-4 py-3 text-sm font-medium transition-colors duration-200;
-    }
+  .title {
+    @apply font-bold text-3xl text-center text-blue-950 leading-snug;
+  }
 
-    .btn-primary {
-        @apply bg-blue-600 text-white font-medium hover:bg-blue-500;
-    }
+  .subtitle {
+    @apply text-blue-950 text-center leading-loose font-bold;
+  }
 
-    .btn-secondary {
-        @apply bg-gray-300 text-blue-950 font-medium hover:border-blue-600;
+  .text-description {
+    @apply text-slate-400 text-center leading-relaxed font-normal;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-3 py-2 text-sm leading-loose font-medium transition-colors duration-200 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white font-bold hover:bg-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-50 text-blue-950 font-bold hover:border-blue-600;
+  }
+
+  .tab:first-child {
+    @apply border-t border-slate-200;
+  }
+
+  .tab {
+    @apply relative flex justify-center border-b border-slate-200 py-5 font-medium text-slate-500 transition-colors duration-200 cursor-pointer;
+  }
+
+  .tab[aria-selected="true"] {
+    @apply text-blue-950;
+  }
+
+  .tab span {
+    @apply relative inline-block;
+  }
+
+  .tab span::after {
+    content: "";
+
+    @apply absolute
+      left-1/2
+      -translate-x-1/2
+      -bottom-5
+      h-1
+      w-0
+      bg-red-400
+      transition-all
+      duration-200;
+  }
+
+  .tab[aria-selected="true"] span::after {
+    width: 120%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tab span::after {
+      @apply transition-none;
     }
+  }
 }
