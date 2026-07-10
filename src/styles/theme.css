@@ -1,3 +1,5 @@
 @theme {
     --font-body: "Rubik", sans-serif;
+
+    --color-primary: hsl(231, 69%, 60%);
 }

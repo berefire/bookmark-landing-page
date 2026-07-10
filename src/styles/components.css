@@ -12,11 +12,11 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center rounded-md px-3 py-2 text-sm leading-loose font-medium transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center justify-center rounded-md px-3 py-2 text-sm leading-loose font-medium transition-colors duration-200 cursor-pointer shadow-[0_0.5rem_0.5rem_-0.25rem_rgb(73_93_207/0.05)];
   }
 
   .btn-primary {
-    @apply bg-blue-600 text-white font-bold hover:bg-blue-500;
+    @apply bg-primary text-white font-bold hover:bg-blue-500;
   }
 
   .btn-secondary {
