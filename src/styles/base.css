@@ -13,3 +13,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+summary {
+  @apply list-none cursor-pointer;
+}
+
+summary::marker {
+  @apply after:content-[''];
+}
+
+summary::-webkit-details-marker {
+  @apply hidden;
+}

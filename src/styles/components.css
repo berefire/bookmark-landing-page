@@ -57,6 +57,34 @@
     width: 120%;
   }
 
+  .faq-item:first-child {
+    @apply pbs-0;
+  }
+
+  .faq-item {
+    @apply border-b border-slate-200 py-4;
+  }
+
+  .faq-question {
+    @apply flex justify-between items-center leading-relaxed font-bold text-blue-950;
+  }
+
+  .faq-question::after {
+    content: "";
+    mask: url("/assets/icons/icon-arrow.svg") center / contain no-repeat;
+    -webkit-mask: url("/assets/icons/icon-arrow.svg") center / contain no-repeat;
+
+    @apply w-4 h-2 flex-shrink-0 bg-primary;
+  }
+
+  .faq-item[open] .faq-question::after {
+    @apply rotate-180 bg-red-400;
+  }
+
+  .faq-answer {
+    @apply pbs-4 font-light leading-loose text-slate-400;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .tab span::after {
       @apply transition-none;
