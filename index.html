@@ -118,8 +118,8 @@
 
           <div class="relative pb-12">
 
-            <div class="absolute left-0 top-12 h-56 w-80 rounded-br-full rounded-tr-full bg-primary"
-              aria-hidden="true"></div>
+            <div class="absolute left-0 top-12 h-56 w-80 rounded-br-full rounded-tr-full bg-primary" aria-hidden="true">
+            </div>
 
             <img src="/assets/images/illustration-features-tab-1.svg"
               alt="Illustration of a person using a computer to manage bookmarks" width="536" height="346"
@@ -221,41 +221,45 @@
       <div class="flex flex-col">
         <details class="faq-item">
           <summary class="faq-question">What is Bookmark?</summary>
-          <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla.
+          <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
+            ultricies fringilla.
             Phasellus blandit ipsum quis quam ornare mattis.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-question">How can I request a new browser?</summary>
-          <p class="faq-answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
+          <p class="faq-answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+            ligula. Suspendisse
             imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
             Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
             ligula. Suspendisse imperdiet.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-question">Is there a mobile app?</summary>
-          <p class="faq-answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna
+          <p class="faq-answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
+            condimentum urna
             vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et
             ultricies bibendum.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-question">What about other Chromium browsers?</summary>
-          <p class="faq-answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque
+          <p class="faq-answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui.
+            Aliquam vitae neque
             eget nisl gravida pellentesque non ut velit.</p>
         </details>
       </div>
       <a href="#" class="flex justify-center"><span class="btn btn-primary">More Info</span></a>
     </section>
-    <section>
+    <section class="bg-primary flex flex-col gap-8 py-12.25 px-8 text-center">
       <div>
-        <p>35,000+ already joined</p>
-        <h2>Stay up-to-date with what we’re doing</h2>
-        <form novalidate>
-          <label for="email-address">Email address</label>
-          <input type="email" id="email-address" name="email-address" placeholder="Enter your email address"
-            autocomplete="email" inputmode="email" required />
-          <button type="submit">Contact Us</button>
-        </form>
+        <p class="font-medium leading-[3] tracking-[0.3125rem] text-white uppercase text-xs">35,000+ already joined</p>
+        <h2 class="font-medium text-2xl text-white">Stay up-to-date with what we’re doing</h2>
       </div>
+      <form class="flex flex-col items-center gap-4" novalidate>
+        <label for="email-address" class="sr-only">Email address</label>
+        <input type="email" id="email-address" name="email-address" placeholder="Enter your email address"
+          autocomplete="email" inputmode="email" required class="p-4 bg-white w-full rounded-[0.3125rem] placeholder:text-slate-400 placeholder:text-description"/>
+        <button type="submit" class="bg-red-400 leading-loose  p-4 rounded-[0.3125rem] w-full text-white font-medium">Contact Us</button>
+      </form>
     </section>
   </main>
   <footer>
