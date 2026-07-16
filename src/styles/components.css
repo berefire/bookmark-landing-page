@@ -74,7 +74,7 @@
     mask: url("/assets/icons/icon-arrow.svg") center / contain no-repeat;
     -webkit-mask: url("/assets/icons/icon-arrow.svg") center / contain no-repeat;
 
-    @apply w-4 h-2 flex-shrink-0 bg-primary;
+    @apply w-4 h-2 shrink-0 bg-primary;
   }
 
   .faq-item[open] .faq-question::after {
@@ -83,6 +83,25 @@
 
   .faq-answer {
     @apply pbs-4 font-light leading-loose text-slate-400;
+  }
+
+  .attribution {
+    @apply text-center text-white text-xs;
+  }
+
+  .link {
+    @apply text-blue-400 underline decoration-[0.08em] underline-offset-[0.15em] transition-all duration-200;
+  }
+
+  .link:hover,
+  .link:focus-visible {
+    @apply decoration-[0.125em];
+  }
+
+  .link:focus-visible {
+    @apply outline-2
+      outline-blue-400
+      outline-offset-2;
   }
 
   @media (prefers-reduced-motion: reduce) {
