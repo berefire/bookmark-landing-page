@@ -1,6 +1,6 @@
 @layer components {
   .title {
-    @apply font-bold text-3xl text-center text-blue-950 leading-snug;
+    @apply font-bold text-3xl md:text-5xl text-center text-blue-950 leading-snug md:leading-[1.1];
   }
 
   .subtitle {
@@ -8,7 +8,7 @@
   }
 
   .text-description {
-    @apply text-slate-400 text-center leading-relaxed font-normal;
+    @apply text-slate-400 text-center leading-relaxed md:leading-[1.55] font-normal md:text-lg;
   }
 
   .btn {
