@@ -63,8 +63,8 @@
   </header>
   <main class="flex flex-col">
     <section class="flex flex-col-reverse gap-12 md:gap-18">
-      <header class="px-8 md:px-28 flex flex-col gap-6">
-        <h1 class="title"> A Simple Bookmark Manager</h1>
+      <header class="px-8 md:px-28.5 flex flex-col gap-6">
+        <h1 class="hero-title"> A Simple Bookmark Manager</h1>
         <p class="text-description">A clean and simple interface to organize your favourite websites. Open a new browser
           tab and see your sites
           load instantly. Try it for free.</p>
@@ -81,8 +81,8 @@
       </div>
     </section>
 
-    <section id="features" aria-labelledby="features-title" class="pbs-32 flex flex-col gap-11">
-      <div class="flex flex-col gap-8 px-8">
+    <section id="features" aria-labelledby="features-title" class="pbs-32 md:pbs-31.5 flex flex-col gap-11">
+      <div class="flex flex-col gap-8 px-8 md:px-28.5">
         <header class="flex flex-col gap-4">
           <h2 id="features-title" class="title">Features</h2>
 
@@ -93,19 +93,19 @@
           </p>
         </header>
 
-        <div class="flex flex-col" role="tablist" aria-label="Bookmark features">
+        <div class="flex flex-col md:flex-row md:border-b md:border-slate-200" role="tablist" aria-label="Bookmark features">
 
-          <button class="tab" id="tab-bookmarking" type="button" role="tab" aria-selected="true"
+          <button class="tab md:w-52" id="tab-bookmarking" type="button" role="tab" aria-selected="true"
             aria-controls="panel-bookmarking">
             <span>Simple Bookmarking</span>
           </button>
 
-          <button class="tab" id="tab-searching" type="button" role="tab" aria-selected="false"
+          <button class="tab md:w-52" id="tab-searching" type="button" role="tab" aria-selected="false"
             aria-controls="panel-searching">
             <span>Speedy Searching</span>
           </button>
 
-          <button class="tab" id="tab-sharing" type="button" role="tab" aria-selected="false"
+          <button class="tab md:w-52" id="tab-sharing" type="button" role="tab" aria-selected="false"
             aria-controls="panel-sharing">
             <span>Easy Sharing</span>
           </button>
@@ -114,23 +114,23 @@
       </div>
 
       <div>
-        <article class="flex flex-col gap-8" id="panel-bookmarking" role="tabpanel" aria-labelledby="tab-bookmarking">
+        <article class="flex flex-col gap-8 md:gap-16" id="panel-bookmarking" role="tabpanel" aria-labelledby="tab-bookmarking">
 
-          <div class="relative pb-12">
+          <div class="relative pb-14">
 
-            <div class="absolute left-0 top-12 h-56 w-80 rounded-br-full rounded-tr-full bg-primary" aria-hidden="true">
+            <div class="absolute left-0 top-12 md:top-20 h-56 md:h-80 w-80 md:w-160 rounded-br-full rounded-tr-full bg-primary" aria-hidden="true">
             </div>
 
             <img src="/assets/images/illustration-features-tab-1.svg"
               alt="Illustration of a person using a computer to manage bookmarks" width="536" height="346"
-              class="relative z-10 mx-auto px-3" />
+              class="relative z-10 mx-auto md:mx-0 md:mr-15.5 md:ms-auto px-3 md:px-0" />
           </div>
 
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4 px-8 md:px-39.5 md:items-center">
 
             <h3 class="title">Bookmark in one click</h3>
 
-            <p class="text-description">
+            <p class="text-description md:w-[42ch]">
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
@@ -151,60 +151,60 @@
 
     </section>
 
-    <section class="flex flex-col gap-10 pbs-33 px-8">
-      <header class="flex flex-col gap-4">
+    <section class="flex flex-col gap-10 md:gap-16 pbs-33 md:pbs-38 px-8 md:px-0">
+      <header class="flex flex-col gap-4 md:items-center">
         <h2 class="title">Download the extension</h2>
-        <p class="text-description">We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        <p class="text-description md:w-[52ch]">We’ve got more browsers in the pipeline. Please do let us know if you’ve
           got a favourite you’d like us to prioritize.</p>
       </header>
 
-      <ul class="flex flex-col gap-10 items-center" role="list">
-        <li class="shadow-[0_0.625rem_1.25rem_-0.3125rem_rgb(73_93_207/0.05)] rounded-2xl">
-          <article class="flex flex-col gap-6 py-8 ">
-            <div class="flex flex-col gap-8 items-center">
-              <img src="/assets/images/logo-chrome.svg" alt="Google Chrome" width="32" height="32" />
+      <ul class="grid gap-10 md:gap-2 justify-items-center md:grid-cols-3 md:items-start md:px-19.5" role="list">
+        <li class="card">
+          <article class="card__body">
+            <div class="card__header">
+              <img class="card__logo" src="/assets/images/logo-chrome.svg" alt="Google Chrome" width="102" height="100" />
               <div class="flex flex-col gap-2 items-center">
                 <h3 class="subtitle">Add to Chrome</h3>
-                <p class="text-description">Minimum version 62</p>
+                <p class="text-card">Minimum version 62</p>
               </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4">
               <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
                 d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
             </svg>
-            <a class="flex justify-center" href="#"><span class="btn btn-primary">Add & Install Extension</span></a>
+            <a class="flex justify-center" href="#"><span class="btn btn-xs btn-primary">Add & Install Extension</span></a>
           </article>
         </li>
-        <li class="shadow-[0_0.625rem_1.25rem_-0.3125rem_rgb(73_93_207/0.05)] rounded-2xl">
-          <article class="flex flex-col gap-6 py-8">
-            <div class="flex flex-col gap-8 items-center">
-              <img src="/assets/images/logo-firefox.svg" alt="Mozilla Firefox" width="32" height="32" />
+        <li class="card">
+          <article class="card__body">
+            <div class="card__header">
+              <img class="card__logo" src="/assets/images/logo-firefox.svg" alt="Mozilla Firefox" width="105" height="100" />
               <div class="flex flex-col gap-2">
                 <h3 class="subtitle">Add to Firefox</h3>
-                <p class="text-description">Minimum version 55</p>
+                <p class="text-card">Minimum version 55</p>
               </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4">
               <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
                 d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
             </svg>
-            <a class="flex justify-center" href="#"><span class="btn btn-primary">Add & Install Extension</span></a>
+            <a class="flex justify-center" href="#"><span class="btn btn-xs btn-primary">Add & Install Extension</span></a>
           </article>
         </li>
-        <li class="shadow-[0_0.625rem_1.25rem_-0.3125rem_rgb(73_93_207/0.05)] rounded-2xl">
-          <article class="flex flex-col gap-6 py-8">
-            <div class="flex flex-col gap-6 items-center">
-              <img src="/assets/images/logo-opera.svg" alt="Opera" width="32" height="32" />
+        <li class="card">
+          <article class="card__body">
+            <div class="card__header">
+              <img class="card__logo" src="/assets/images/logo-opera.svg" alt="Opera" width="96" height="100" />
               <div class="flex flex-col gap-2">
                 <h3 class="subtitle">Add to Opera</h3>
-                <p class="text-description">Minimum version 46</p>
+                <p class="text-card">Minimum version 46</p>
               </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4">
               <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
                 d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
             </svg>
-            <a class="flex justify-center" href="#"><span class="btn btn-primary">Add & Install Extension</span></a>
+            <a class="flex justify-center" href="#"><span class="btn btn-xs btn-primary">Add & Install Extension</span></a>
           </article>
         </li>
       </ul>

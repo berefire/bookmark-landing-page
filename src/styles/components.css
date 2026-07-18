@@ -1,18 +1,30 @@
 @layer components {
-  .title {
+  .hero-title {
     @apply font-bold text-3xl md:text-5xl text-center text-blue-950 leading-snug md:leading-[1.1];
   }
 
+  .title {
+    @apply font-bold text-3xl md:text-[2rem] text-center text-blue-950 leading-snug md:leading-tight md:tracking-[0.00625em];
+  }
+
   .subtitle {
-    @apply text-blue-950 text-center leading-loose font-bold;
+    @apply text-blue-950 text-center leading-loose md:leading-[1.2] md:tracking-[0.0156em] font-bold text-2xl md:text-xl;
   }
 
   .text-description {
     @apply text-slate-400 text-center leading-relaxed md:leading-[1.55] font-normal md:text-lg;
   }
 
+  .text-card {
+    @apply text-slate-400 text-center md:text-[0.875rem] leading-relaxed md:leading-loose md:tracking-[0.0156em];
+  }
+
   .btn {
     @apply inline-flex items-center justify-center rounded-md px-3 py-2 text-sm leading-loose font-medium transition-colors duration-200 cursor-pointer shadow-[0_0.5rem_0.5rem_-0.25rem_rgb(73_93_207/0.05)];
+  }
+
+  .btn-xs {
+    @apply md:px-2.25 md:py-0.75;
   }
 
   .btn-primary {
@@ -24,11 +36,11 @@
   }
 
   .tab:first-child {
-    @apply border-t border-slate-200;
+    @apply border-t md:border-0 border-slate-200;
   }
 
   .tab {
-    @apply relative flex justify-center border-b border-slate-200 py-5 font-medium text-slate-500 transition-colors duration-200 cursor-pointer;
+    @apply relative flex justify-center border-b md:border-0 border-slate-200 py-5 font-bold text-slate-500 transition-colors duration-200 cursor-pointer;
   }
 
   .tab[aria-selected="true"] {
@@ -54,7 +66,27 @@
   }
 
   .tab[aria-selected="true"] span::after {
-    width: 120%;
+    @apply w-[120%] md:w-[130%];
+  }
+
+  .card {
+    @apply w-full rounded-2xl shadow-[0_0.625rem_1.25rem_-0.3125rem_rgb(73_93_207/0.05)] py-8 md:py-6;
+  }
+
+  .card__body {
+    @apply flex h-full flex-col gap-6 md:gap-4;
+  }
+
+  .card__header {
+    @apply flex flex-col gap-8 md:gap-4 items-center justify-center;
+  }
+
+  .card__logo {
+    @apply flex h-25 md:h-17.5 md:w-18 items-center justify-center;
+  }
+
+  .card__logo img {
+    @apply h-full w-auto;
   }
 
   .faq-item:first-child {
