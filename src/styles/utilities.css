@@ -1,0 +1,16 @@
+@layer utilities {
+  .link {
+    @apply text-blue-400 underline decoration-[0.08em] underline-offset-[0.15em] transition-all duration-200;
+  }
+
+  .link:hover,
+  .link:focus-visible {
+    @apply decoration-[0.125em];
+  }
+
+  .link:focus-visible {
+    @apply outline-2
+      outline-blue-400
+      outline-offset-2;
+  }
+}

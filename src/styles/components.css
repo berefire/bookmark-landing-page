@@ -20,7 +20,7 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center rounded-md px-3 py-2 text-sm leading-loose font-medium transition-colors duration-200 cursor-pointer shadow-[0_0.5rem_0.5rem_-0.25rem_rgb(73_93_207/0.05)];
+    @apply inline-flex items-center justify-center rounded-md px-3 md:px-6 py-2 md:py-2.5 md:text-sm leading-loose md:tracking-[0.0156em] font-medium transition-colors duration-200 cursor-pointer shadow-[0_0.5rem_0.5rem_-0.25rem_rgb(73_93_207/0.05)];
   }
 
   .btn-xs {
@@ -119,21 +119,6 @@
 
   .attribution {
     @apply text-center text-white text-xs;
-  }
-
-  .link {
-    @apply text-blue-400 underline decoration-[0.08em] underline-offset-[0.15em] transition-all duration-200;
-  }
-
-  .link:hover,
-  .link:focus-visible {
-    @apply decoration-[0.125em];
-  }
-
-  .link:focus-visible {
-    @apply outline-2
-      outline-blue-400
-      outline-offset-2;
   }
 
   @media (prefers-reduced-motion: reduce) {
