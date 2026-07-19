@@ -19,6 +19,10 @@
     @apply text-slate-400 text-center md:text-[0.875rem] leading-relaxed md:leading-loose md:tracking-[0.0156em];
   }
 
+  .text-menu-desktop {
+    @apply uppercase text-blue-950 text-[0.875rem] leading-loose tracking-[0.0156em] font-normal;
+  }
+
   .btn {
     @apply inline-flex items-center justify-center rounded-md px-3 md:px-6 py-2 md:py-2.5 md:text-sm leading-loose md:tracking-[0.0156em] font-medium transition-colors duration-200 cursor-pointer shadow-[0_0.5rem_0.5rem_-0.25rem_rgb(73_93_207/0.05)];
   }
@@ -33,6 +37,10 @@
 
   .btn-secondary {
     @apply bg-gray-50 text-blue-950 font-bold hover:border-blue-600;
+  }
+
+  .btn-login {
+    @apply bg-red-400 text-white inline-flex items-center justify-center rounded-[0.3125rem] py-1.5 px-[2.156rem] text-[0.875rem] leading-loose tracking-[0.0156em] font-medium uppercase transition-colors duration-200 cursor-pointer shadow-[0_0.5rem_0.5rem_-0.25rem_rgb(73_93_207/0.05)] hover:bg-red-500;
   }
 
   .tab:first-child {

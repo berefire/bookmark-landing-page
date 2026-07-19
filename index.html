@@ -41,19 +41,19 @@
 </head>
 
 <body class="bg-white font-body text-[0.9375rem]">
-  <header class="flex flex-row justify-between pbs-10 pbe-9 px-8 md:px-20 md:pbe-20">
+  <header class="flex flex-row justify-between items-center pbs-10 lg:pbs-12 pbe-9 md:pbe-20 px-8 md:px-20 lg:ps-42.75 lg:pe-41.25">
     <a href="#">
       <img src="/assets/images/logo-bookmark.svg" alt="Bookmark" width="148" height="25" />
     </a>
-    <nav aria-label="Desktop navigation" hidden>
-      <ul role="list">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#login">Login</a></li>
+    <nav aria-label="Desktop navigation" class="hidden lg:flex">
+      <ul class="flex flex-row gap-12 items-center" role="list">
+        <li><a class="text-menu-desktop" href="#features">Features</a></li>
+        <li><a class="text-menu-desktop" href="#pricing">Pricing</a></li>
+        <li><a class="text-menu-desktop" href="#contact">Contact</a></li>
+        <li><a class="btn-login" href="#login">Login</a></li>
       </ul>
     </nav>
-    <button class="cursor-pointer" type="button" aria-expanded="false" aria-controls="mobile-menu"
+    <button class="lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu"
       aria-label="Open mobile menu">
       <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="15"
         viewBox="0 0 18 15" fill="none">
