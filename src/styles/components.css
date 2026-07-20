@@ -56,7 +56,7 @@
   }
 
   .tab span {
-    @apply relative inline-block;
+    @apply relative;
   }
 
   .tab span::after {
@@ -70,11 +70,31 @@
       w-0
       bg-red-400
       transition-all
-      duration-200;
+      duration-200
+      md:hidden;
   }
 
   .tab[aria-selected="true"] span::after {
-    @apply w-[120%] md:w-[130%];
+    @apply w-[120%];
+  }
+
+  .tab::after {
+    content: "";
+
+    @apply absolute
+    hidden
+    md:block
+    bottom-0
+    left-0
+    h-1
+    w-0
+    bg-red-400
+    transition-all
+    duration-200;
+  }
+
+  .tab[aria-selected="true"]::after {
+    @apply md:w-full;
   }
 
   .card {

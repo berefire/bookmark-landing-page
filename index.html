@@ -81,12 +81,12 @@
       </div>
     </section>
 
-    <section id="features" aria-labelledby="features-title" class="pbs-32 md:pbs-31.5 flex flex-col gap-11">
-      <div class="flex flex-col gap-8 px-8 md:px-28.5">
-        <header class="flex flex-col gap-4">
+    <section id="features" aria-labelledby="features-title" class="pbs-32 md:pbs-31.5 lg:pbs-20 flex flex-col gap-11 lg:gap-18">
+      <div class="flex flex-col gap-8 lg:gap-18 px-8 md:px-28.5 lg:px-68 xl:px-88.75">
+        <header class="flex flex-col gap-4 items-center">
           <h2 id="features-title" class="title">Features</h2>
 
-          <p class="text-description">
+          <p class="text-description lg:w-[52ch]">
             Our aim is to make it quick and easy for you to access your favourite
             websites. Your bookmarks sync between your devices so you can access
             them on the go.
@@ -95,17 +95,17 @@
 
         <div class="flex flex-col md:flex-row md:border-b md:border-slate-200" role="tablist" aria-label="Bookmark features">
 
-          <button class="tab md:w-52" id="tab-bookmarking" type="button" role="tab" aria-selected="true"
+          <button class="tab md:flex-1" id="tab-bookmarking" type="button" role="tab" aria-selected="true"
             aria-controls="panel-bookmarking">
             <span>Simple Bookmarking</span>
           </button>
 
-          <button class="tab md:w-52" id="tab-searching" type="button" role="tab" aria-selected="false"
+          <button class="tab md:flex-1" id="tab-searching" type="button" role="tab" aria-selected="false"
             aria-controls="panel-searching">
             <span>Speedy Searching</span>
           </button>
 
-          <button class="tab md:w-52" id="tab-sharing" type="button" role="tab" aria-selected="false"
+          <button class="tab md:flex-1" id="tab-sharing" type="button" role="tab" aria-selected="false"
             aria-controls="panel-sharing">
             <span>Easy Sharing</span>
           </button>
@@ -114,23 +114,23 @@
       </div>
 
       <div>
-        <article class="flex flex-col gap-8 md:gap-16" id="panel-bookmarking" role="tabpanel" aria-labelledby="tab-bookmarking">
+        <article class="flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-30 lg:items-center" id="panel-bookmarking" role="tabpanel" aria-labelledby="tab-bookmarking">
 
-          <div class="relative pb-14">
+          <div class="relative pb-16 lg:flex-1">
 
-            <div class="absolute left-0 top-12 md:top-20 h-56 md:h-80 w-80 md:w-160 rounded-br-full rounded-tr-full bg-primary" aria-hidden="true">
+            <div class="absolute left-0 bottom-0 w-[88%] h-[78%] rounded-br-full rounded-tr-full bg-primary" aria-hidden="true">
             </div>
 
             <img src="/assets/images/illustration-features-tab-1.svg"
               alt="Illustration of a person using a computer to manage bookmarks" width="536" height="346"
-              class="relative z-10 mx-auto md:mx-0 md:mr-15.5 md:ms-auto px-3 md:px-0" />
+              class="relative z-10 mx-auto md:mx-0 md:mr-15.5 lg:mr-0 md:ms-auto px-3 md:px-0  w-[85%] h-auto" />
           </div>
 
-          <div class="flex flex-col gap-4 px-8 md:px-39.5 md:items-center">
+          <div class="flex flex-col gap-4 px-8 md:px-39.5 lg:px-0 md:items-center lg:items-start lg:justify-center lg:flex-1">
 
             <h3 class="title">Bookmark in one click</h3>
 
-            <p class="text-description md:w-[42ch]">
+            <p class="text-description md:w-[42ch] lg:text-start">
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
