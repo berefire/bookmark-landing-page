@@ -41,7 +41,7 @@
 </head>
 
 <body class="bg-white font-body text-[0.9375rem]">
-  <header class="flex flex-row justify-between items-center pbs-10 lg:pbs-12 pbe-9 md:pbe-20 px-8 md:px-20 lg:ps-42.75 lg:pe-41.25">
+  <header class="flex flex-row justify-between items-center pbs-10 lg:pbs-12 pbe-9 md:pbe-20 lg:pbe-28.5 px-8 md:px-20 lg:ps-42.75 lg:pe-41.25">
     <a href="#">
       <img src="/assets/images/logo-bookmark.svg" alt="Bookmark" width="148" height="25" />
     </a>
@@ -62,22 +62,22 @@
     </button>
   </header>
   <main class="flex flex-col">
-    <section class="flex flex-col-reverse gap-12 md:gap-18">
-      <header class="px-8 md:px-28.5 flex flex-col gap-6">
+    <section class="flex flex-col-reverse lg:flex-row gap-12 md:gap-18 lg:gap-0 lg:ps-41.25 items-center">
+      <header class="px-8 md:px-28.5 lg:px-0 flex flex-col lg:flex-1 gap-6 lg:justify-center">
         <h1 class="hero-title"> A Simple Bookmark Manager</h1>
-        <p class="text-description">A clean and simple interface to organize your favourite websites. Open a new browser
+        <p class="text-description lg:text-start md:w-[53ch]">A clean and simple interface to organize your favourite websites. Open a new browser
           tab and see your sites
           load instantly. Try it for free.</p>
-        <div class="flex flex-row gap-4 justify-center">
+        <div class="flex flex-row gap-4 justify-center lg:justify-start">
           <a href="#" class="btn btn-primary">Get it on Chrome</a>
           <a href="#" class="btn btn-secondary">Get it on Firefox</a>
         </div>
       </header>
-      <div class="relative">
-        <div class="absolute right-0 bottom-0 h-52 md:h-80 w-80 md:w-130 rounded-bl-full rounded-tl-full bg-primary"></div>
+      <div class="relative mx-auto w-full">
+        <div class="absolute right-0 bottom-0 h-[70%] w-[74%] rounded-bl-full rounded-tl-full bg-primary"></div>
         <img src="/assets/images/illustration-hero.svg"
           alt="Illustration of a person using a computer to manage bookmarks" width="657" height="466"
-          class="relative z-10 mx-auto h-auto" />
+          class="relative z-10 mx-auto max-w-164 h-auto" />
       </div>
     </section>
 

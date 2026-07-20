@@ -1,6 +1,6 @@
 @layer components {
   .hero-title {
-    @apply font-bold text-3xl md:text-5xl text-center text-blue-950 leading-snug md:leading-[1.1];
+    @apply font-bold text-3xl md:text-5xl text-center lg:text-start text-blue-950 leading-snug md:leading-[1.1];
   }
 
   .title {
