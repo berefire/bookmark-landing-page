@@ -151,14 +151,14 @@
 
     </section>
 
-    <section class="flex flex-col gap-10 md:gap-16 pbs-33 md:pbs-38 px-8 md:px-0">
+    <section class="flex flex-col gap-10 md:gap-16 lg:gap-12 pbs-33 md:pbs-38 lg:pbs-40.75 px-8 md:px-0">
       <header class="flex flex-col gap-4 md:items-center">
         <h2 class="title">Download the extension</h2>
         <p class="text-description md:w-[52ch]">We’ve got more browsers in the pipeline. Please do let us know if you’ve
           got a favourite you’d like us to prioritize.</p>
       </header>
 
-      <ul class="grid gap-10 md:gap-2 justify-items-center md:grid-cols-3 md:items-start md:px-19.5" role="list">
+      <ul class="mx-auto grid w-fit gap-10 md:gap-2 md:grid-cols-3 md:px-19.5 lg:px-0 items-start" role="list">
         <li class="card">
           <article class="card__body">
             <div class="card__header">
@@ -168,14 +168,14 @@
                 <p class="text-card">Minimum version 62</p>
               </div>
             </div>
-            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4" viewBox="0 0 280 4">
               <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
                 d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
             </svg>
             <a class="flex justify-center" href="#"><span class="btn btn-xs btn-primary">Add & Install Extension</span></a>
           </article>
         </li>
-        <li class="card">
+        <li class="card lg:mt-8">
           <article class="card__body">
             <div class="card__header">
               <img class="card__logo" src="/assets/images/logo-firefox.svg" alt="Mozilla Firefox" width="105" height="100" />
@@ -184,14 +184,14 @@
                 <p class="text-card">Minimum version 55</p>
               </div>
             </div>
-            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4" viewBox="0 0 280 4">
               <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
                 d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
             </svg>
             <a class="flex justify-center" href="#"><span class="btn btn-xs btn-primary">Add & Install Extension</span></a>
           </article>
         </li>
-        <li class="card">
+        <li class="card lg:mt-16">
           <article class="card__body">
             <div class="card__header">
               <img class="card__logo" src="/assets/images/logo-opera.svg" alt="Opera" width="96" height="100" />
@@ -200,7 +200,7 @@
                 <p class="text-card">Minimum version 46</p>
               </div>
             </div>
-            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4">
+            <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="280" height="4" viewBox="0 0 280 4">
               <path fill="#495DCF" fill-opacity=".2" fill-rule="evenodd"
                 d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
             </svg>

@@ -28,7 +28,7 @@
   }
 
   .btn-xs {
-    @apply md:px-2.25 md:py-0.75;
+    @apply md:px-2.25 lg:px-8 md:py-0.75 lg:py-2;
   }
 
   .btn-primary {
@@ -98,11 +98,11 @@
   }
 
   .card {
-    @apply w-full rounded-2xl shadow-[0_0.625rem_1.25rem_-0.3125rem_rgb(73_93_207/0.05)] py-8 md:py-6;
+    @apply max-inline-70 rounded-2xl shadow-[0_0.625rem_1.25rem_-0.3125rem_rgb(73_93_207/0.05)] py-8 md:py-6;
   }
 
   .card__body {
-    @apply flex h-full flex-col gap-6 md:gap-4;
+    @apply flex w-full h-full flex-col gap-6 md:gap-4;
   }
 
   .card__header {
