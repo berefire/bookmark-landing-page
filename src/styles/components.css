@@ -20,7 +20,7 @@
   }
 
   .text-menu-desktop {
-    @apply uppercase text-blue-950 text-[0.875rem] leading-loose tracking-[0.0156em] font-normal;
+    @apply uppercase text-blue-950 text-[0.875rem] leading-loose tracking-[0.0156em] font-normal hover:text-red-400;
   }
 
   .btn {
@@ -32,15 +32,15 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white font-bold hover:bg-blue-500;
+    @apply bg-primary text-white font-bold hover:bg-white hover:text-primary hover:border-2 hover:border-primary;
   }
 
   .btn-secondary {
-    @apply bg-gray-50 text-blue-950 font-bold hover:border-blue-600;
+    @apply bg-gray-50 text-blue-950 font-bold hover:bg-white hover:border-2 hover:border-gray-600 hover:text-gray-600;
   }
 
   .btn-login {
-    @apply bg-red-400 text-white inline-flex items-center justify-center rounded-[0.3125rem] py-1.5 px-[2.156rem] text-[0.875rem] leading-loose tracking-[0.0156em] font-medium uppercase transition-colors duration-200 cursor-pointer shadow-[0_0.5rem_0.5rem_-0.25rem_rgb(73_93_207/0.05)] hover:bg-red-500;
+    @apply bg-red-400 text-white inline-flex items-center justify-center rounded-[0.3125rem] py-1.5 px-[2.156rem] text-[0.875rem] leading-loose tracking-[0.0156em] font-medium uppercase transition-colors duration-200 cursor-pointer shadow-[0_0.5rem_0.5rem_-0.25rem_rgb(73_93_207/0.05)] hover:text-red-400 hover:bg-white hover:border-2 hover:border-red-400;
   }
 
   .tab:first-child {
@@ -49,6 +49,10 @@
 
   .tab {
     @apply relative flex justify-center border-b md:border-0 border-slate-200 py-5 font-bold text-slate-500 transition-colors duration-200 cursor-pointer;
+  }
+
+  .tab:not([aria-selected="true"]):hover {
+    @apply text-red-400;
   }
 
   .tab[aria-selected="true"] {
@@ -126,7 +130,7 @@
   }
 
   .faq-question {
-    @apply flex justify-between items-center leading-relaxed font-bold text-blue-950;
+    @apply flex justify-between items-center leading-relaxed font-bold text-blue-950 hover:text-red-400 transition-colors duration-200 cursor-pointer;
   }
 
   .faq-question::after {
@@ -134,7 +138,7 @@
     mask: url("/assets/icons/icon-arrow.svg") center / contain no-repeat;
     -webkit-mask: url("/assets/icons/icon-arrow.svg") center / contain no-repeat;
 
-    @apply w-4 h-2 shrink-0 bg-primary;
+    @apply w-4 h-2 shrink-0 bg-primary transition-colors duration-200;
   }
 
   .faq-item[open] .faq-question::after {
@@ -143,6 +147,30 @@
 
   .faq-answer {
     @apply pbs-4 font-light leading-loose text-slate-400;
+  }
+
+  .form-field {
+    @apply w-full md:flex-3;
+  }
+
+  .form-field--error {
+    @apply rounded-[0.3125rem] bg-red-400 p-0.5;
+  }
+
+  .form-input-wrapper {
+    @apply relative;
+  }
+
+  .form-input {
+    @apply w-full rounded-[0.3125rem] bg-white py-2.5 px-6 placeholder:text-slate-400;
+  }
+
+  .form-input__icon {
+    @apply absolute right-4 top-1/2 -translate-y-1/2;
+  }
+
+  .form-error {
+    @apply px-4 pt-1 pb-1 text-xs italic font-medium text-white tracking-[0.015625em] leading-[1.2];
   }
 
   .attribution {
