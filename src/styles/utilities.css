@@ -13,4 +13,8 @@
       outline-blue-400
       outline-offset-2;
   }
+
+  .u-no-scroll {
+    @apply overflow-hidden overscroll-none;
+  }
 }

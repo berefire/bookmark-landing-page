@@ -1,14 +1,14 @@
 @layer components {
   .hero-title {
-    @apply font-bold text-3xl md:text-5xl text-center lg:text-start text-blue-950 leading-snug md:leading-[1.1];
+    @apply font-medium text-3xl md:text-5xl text-center lg:text-start text-blue-950 leading-snug md:leading-[1.1];
   }
 
   .title {
-    @apply font-bold text-3xl md:text-[2rem] text-center text-blue-950 leading-snug md:leading-tight md:tracking-[0.00625em];
+    @apply font-medium text-3xl md:text-[2rem] text-center text-blue-950 leading-snug md:leading-tight md:tracking-[0.00625em];
   }
 
   .subtitle {
-    @apply text-blue-950 text-center leading-loose md:leading-[1.2] md:tracking-[0.0156em] font-bold text-2xl md:text-xl;
+    @apply text-blue-950 text-center leading-loose md:leading-[1.2] md:tracking-[0.0156em] font-medium text-2xl md:text-xl;
   }
 
   .text-description {
@@ -19,7 +19,7 @@
     @apply text-slate-400 text-center md:text-[0.875rem] leading-relaxed md:leading-loose md:tracking-[0.0156em];
   }
 
-  .text-menu-desktop {
+  .menu-link {
     @apply uppercase text-blue-950 text-[0.875rem] leading-loose tracking-[0.0156em] font-normal hover:text-red-400;
   }
 
@@ -32,11 +32,11 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white font-bold hover:bg-white hover:text-primary hover:border-2 hover:border-primary;
+    @apply bg-primary text-white hover:bg-white hover:text-primary hover:border-2 hover:border-primary;
   }
 
   .btn-secondary {
-    @apply bg-gray-50 text-blue-950 font-bold hover:bg-white hover:border-2 hover:border-gray-600 hover:text-gray-600;
+    @apply bg-gray-50 text-blue-950 hover:bg-white hover:border-2 hover:border-gray-600 hover:text-gray-600;
   }
 
   .btn-login {
@@ -48,7 +48,7 @@
   }
 
   .tab {
-    @apply relative flex justify-center border-b md:border-0 border-slate-200 py-5 font-bold text-slate-500 transition-colors duration-200 cursor-pointer;
+    @apply relative flex justify-center border-b md:border-0 border-slate-200 py-5 font-medium text-slate-500 transition-colors duration-200 cursor-pointer;
   }
 
   .tab:not([aria-selected="true"]):hover {
@@ -130,7 +130,7 @@
   }
 
   .faq-question {
-    @apply flex justify-between items-center leading-relaxed font-bold text-blue-950 hover:text-red-400 transition-colors duration-200 cursor-pointer;
+    @apply flex justify-between items-center leading-relaxed font-normal text-blue-950 hover:text-red-400 transition-colors duration-200 cursor-pointer;
   }
 
   .faq-question::after {
@@ -171,6 +171,26 @@
 
   .form-error {
     @apply px-4 pt-1 pb-1 text-xs italic font-medium text-white tracking-[0.015625em] leading-[1.2];
+  }
+
+  .dialog[open] {
+    @apply block;
+  }
+
+  .dialog__content {
+    @apply fixed inline-full block-full bg-transparent text-white flex flex-col  justify-between items-center translate-x-full transition-transform duration-300 ease-out; 
+  }
+
+  .dialog.animate .dialog__content {
+    @apply translate-x-0;
+  }
+
+  .dialog__item {
+    @apply py-6 md:py-8 border-b border-white/15 inline-full text-center;
+  }
+
+  .dialog__link {
+    @apply  text-white text-center uppercase font-normal text-xl tracking-[0.144em] leading-[0.85] hover:text-red-400;
   }
 
   .attribution {

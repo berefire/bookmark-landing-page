@@ -2,11 +2,11 @@ import { REQUIRED_ELEMENTS } from "@js/shared/constants.js";
 
 const SELECTORS = {
   // Mobile menu
-  mobileNavButton: "#menu-button",
-  mobileCloseButton: "#menu-button--close",
-  mobileNav: "#mobile-menu",
-  mobileNavContent: "#site-dialog__content",
-  mobileNavLinks: "#site-nav--mobile .site-nav__link",
+  mobileNavButton: "[data-mobile-menu-open]",
+  mobileCloseButton: "[data-mobile-menu-close]",
+  mobileNav: "[data-mobile-menu]",
+  mobileNavContent: "[data-mobile-menu-content]",
+  mobileNavLinks: "[data-mobile-menu-link]",
 
  /* // Slider
   sliderSource: "[data-slide-source]",

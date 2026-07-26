@@ -42,3 +42,11 @@ summary::marker {
 summary::-webkit-details-marker {
   @apply hidden;
 }
+
+dialog {
+  @apply fixed inset-0 inline-full block-dvh m-0 p-0 border-none max-inline-none max-block-0 overflow-hidden;
+}
+
+dialog::backdrop {
+  @apply bg-dialog-backdrop/95;
+}
