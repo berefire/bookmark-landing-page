@@ -100,17 +100,17 @@
           aria-label="Bookmark features">
 
           <button class="tab md:flex-1" id="tab-bookmarking" type="button" role="tab" aria-selected="true"
-            aria-controls="panel-bookmarking">
+            aria-controls="panel-bookmarking" data-tab="bookmarking">
             <span>Simple Bookmarking</span>
           </button>
 
           <button class="tab md:flex-1" id="tab-searching" type="button" role="tab" aria-selected="false"
-            aria-controls="panel-searching">
+            aria-controls="panel-searching" data-tab="searching">
             <span>Speedy Searching</span>
           </button>
 
           <button class="tab md:flex-1" id="tab-sharing" type="button" role="tab" aria-selected="false"
-            aria-controls="panel-sharing">
+            aria-controls="panel-sharing" data-tab="sharing">
             <span>Easy Sharing</span>
           </button>
 
@@ -121,23 +121,23 @@
         <article class="flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-30 lg:items-center" id="panel-bookmarking"
           role="tabpanel" aria-labelledby="tab-bookmarking">
 
-          <div class="relative pb-16 lg:flex-1">
+          <div class="relative pb-12 md:pb-16 lg:flex-1">
 
-            <div class="absolute left-0 bottom-0 w-[88%] h-[78%] rounded-br-full rounded-tr-full bg-primary"
+            <div class="absolute left-0 bottom-0 w-[80%] md:w-[85%] lg:w-[88%] h-[78%] rounded-br-full rounded-tr-full bg-primary"
               aria-hidden="true">
             </div>
 
             <img src="/assets/images/illustration-features-tab-1.svg"
               alt="Illustration of a person using a computer to manage bookmarks" width="536" height="346"
-              class="relative z-10 mx-auto md:mx-0 md:mr-15.5 lg:mr-0 md:ms-auto px-3 md:px-0  w-[85%] h-auto" />
+              class="relative z-10 mx-auto md:mx-0 md:mr-15.5 lg:mr-0 md:ms-auto px-3 md:px-0  w-[85%] h-auto" data-feature-image/>
           </div>
 
           <div
             class="flex flex-col gap-4 px-8 md:px-39.5 lg:px-0 md:items-center lg:items-start lg:justify-center lg:flex-1">
 
-            <h3 class="title">Bookmark in one click</h3>
+            <h3 class="title" data-feature-title>Bookmark in one click</h3>
 
-            <p class="text-body md:w-[42ch] lg:text-start">
+            <p class="text-body md:w-[42ch] lg:text-start" data-feature-description>
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
@@ -149,11 +149,7 @@
             </a>
 
           </div>
-
         </article>
-
-        <article id="panel-searching" role="tabpanel" aria-labelledby="tab-searching" hidden></article>
-        <article id="panel-sharing" role="tabpanel" aria-labelledby="tab-sharing" hidden></article>
       </div>
 
     </section>
