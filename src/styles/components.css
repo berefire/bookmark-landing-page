@@ -1,5 +1,5 @@
 @layer components {
-  .hero-title {
+  .title-hero {
     @apply font-medium text-3xl md:text-5xl text-center lg:text-start text-blue-950 leading-snug md:leading-[1.1];
   }
 
@@ -7,11 +7,11 @@
     @apply font-medium text-3xl md:text-[2rem] text-center text-blue-950 leading-snug md:leading-tight md:tracking-[0.00625em];
   }
 
-  .subtitle {
+  .title-card {
     @apply text-blue-950 text-center leading-loose md:leading-[1.2] md:tracking-[0.0156em] font-medium text-2xl md:text-xl;
   }
 
-  .text-description {
+  .text-body {
     @apply text-slate-400 text-center leading-relaxed md:leading-[1.55] font-normal md:text-lg;
   }
 
