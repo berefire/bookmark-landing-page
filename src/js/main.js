@@ -1,5 +1,6 @@
 import "@styles/input.css";
 
-import { initializeMenu } from "@js/features";
+import { initializeMenu, initializeTab } from "@js/features";
 
 initializeMenu();
+initializeTab();

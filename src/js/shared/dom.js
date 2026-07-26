@@ -8,13 +8,11 @@ const SELECTORS = {
   mobileNavContent: "[data-mobile-menu-content]",
   mobileNavLinks: "[data-mobile-menu-link]",
 
- /* // Slider
-  sliderSource: "[data-slide-source]",
-  sliderImage: "[data-slide-image]",
-  sliderTitle: "[data-slide-title]",
-  sliderDescription: "[data-slide-description]",
-  previousSlideButton: '[data-action="previous"]',
-  nextSlideButton: '[data-action="next"]',*/
+  // Features Tab
+  featuresTabButtons: "[data-tab]",
+  featureTitle: "[data-feature-title]",
+  featureDescription: "[data-feature-description]",
+  featureImage: "[data-feature-image]",
 };
 
 function isCollection(value) {
@@ -75,12 +73,10 @@ function initDOMElements() {
     mobileNavContent: document.querySelector(SELECTORS.mobileNavContent),
     mobileNavLinks: document.querySelectorAll(SELECTORS.mobileNavLinks),
 
-    /*sliderSource: document.querySelector(SELECTORS.sliderSource),
-    sliderImage: document.querySelector(SELECTORS.sliderImage),
-    sliderTitle: document.querySelector(SELECTORS.sliderTitle),
-    sliderDescription: document.querySelector(SELECTORS.sliderDescription),
-    previousSlideButton: document.querySelector(SELECTORS.previousSlideButton),
-    nextSlideButton: document.querySelector(SELECTORS.nextSlideButton), */
+    featuresTabButtons: document.querySelectorAll("[data-tab]"),
+    featureTitle: document.querySelector("[data-feature-title]"),
+    featureDescription: document.querySelector("[data-feature-description]"),
+    featureImage: document.querySelector("[data-feature-image]"),
   };
 
   Object.entries(DOM).forEach(([key, element]) => {
