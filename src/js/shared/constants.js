@@ -2,8 +2,6 @@ export const BREAKPOINTS = {
     desktop: "64em"
 };
 
-export const ANIMATION_DURATION = 300; // Duration in milliseconds
-
 export const REQUIRED_ELEMENTS = [
     // Mobile menu
     "mobileNavButton",
@@ -12,7 +10,7 @@ export const REQUIRED_ELEMENTS = [
     "mobileNavContent",
     "mobileNavLinks",
 
-    // Slider
+    /*// Slider
     "sliderSource",
     "sliderImage",
     "sliderTitle",
@@ -20,4 +18,5 @@ export const REQUIRED_ELEMENTS = [
 
     "previousSlideButton",
     "nextSlideButton",
+    */ 
 ];
