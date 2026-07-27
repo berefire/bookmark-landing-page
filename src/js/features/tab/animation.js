@@ -1,15 +1,4 @@
-function waitTransition(element){
-    return new Promise((resolve) => {
-        element.addEventListener("transitionend", function handleTransition(event) {
-            if (event.propertyName !== "opacity" ) {
-                return;
-            }
-
-            element.removeEventListener("transitionend", handleTransition);
-            resolve();
-        }, { once: true });
-    });
-}
+import { waitTransition } from "@js/shared";
 
 export async function animateOut(elements) {
   elements.forEach((element) => {

@@ -1,18 +1,4 @@
- function waitTransition(element, property = "height") {
-  return new Promise(resolve => {
-    element.addEventListener(
-      "transitionend",
-      function handle(event) {
-        if (event.propertyName !== property) {
-          return;
-        }
-
-        resolve();
-      },
-      { once: true }
-    );
-  });
-}
+import { waitTransition } from "@js/shared";
  
  export async function animateOpen(item, answer) {
     item.setAttribute("open", "");
