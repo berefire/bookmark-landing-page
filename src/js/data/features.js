@@ -1,4 +1,4 @@
-const BASE=import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL;
 
 export const FEATURES = [
   {
