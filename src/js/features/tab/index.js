@@ -9,6 +9,7 @@ export function initializeTab(){
         featureTitle: DOM.featureTitle,
         featureDescription: DOM.featureDescription,
         featureImage: DOM.featureImage,
+        featureButton: DOM.featureButton,
     });
     bindTabEvents({
         tabController,

@@ -13,6 +13,7 @@ const SELECTORS = {
   featureTitle: "[data-feature-title]",
   featureDescription: "[data-feature-description]",
   featureImage: "[data-feature-image]",
+  featureButton: "[data-feature-button]",
 
   // FAQ
   faqItems: "[data-faq-item]",
@@ -79,9 +80,10 @@ function initDOMElements() {
     mobileNavLinks: document.querySelectorAll(SELECTORS.mobileNavLinks),
 
     featuresTabButtons: document.querySelectorAll("[data-tab]"),
-    featureTitle: document.querySelector("[data-feature-title]"),
-    featureDescription: document.querySelector("[data-feature-description]"),
-    featureImage: document.querySelector("[data-feature-image]"),
+    featureTitle: document.querySelector(SELECTORS.featureTitle),
+    featureDescription: document.querySelector(SELECTORS.featureDescription),
+    featureImage: document.querySelector(SELECTORS.featureImage),
+    featureButton: document.querySelector(SELECTORS.featureButton),
 
     faqItems: document.querySelectorAll(SELECTORS.faqItems),
     faqQuestions: document.querySelectorAll("[data-faq-question]"),

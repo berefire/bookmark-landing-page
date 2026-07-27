@@ -15,6 +15,7 @@ export const REQUIRED_ELEMENTS = [
     "featureTitle",
     "featureDescription",
     "featureImage",
+    "featureButton",
 
     // FAQ
     "faqItems",
