@@ -1,7 +1,4 @@
-export function waitTransition(
-  element,
-  property = "opacity"
-) {
+export function waitTransition(element, property = "opacity") {
   return new Promise((resolve) => {
     element.addEventListener(
       "transitionend",
@@ -13,7 +10,6 @@ export function waitTransition(
         if (event.propertyName !== property) {
           return;
         }
-
         resolve();
       },
       { once: true }

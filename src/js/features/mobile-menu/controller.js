@@ -1,4 +1,5 @@
-import { isDesktop, prefersReducedMotion, lockScroll, unlockScroll } from "@js/shared";
+import { isDesktop, lockScroll, unlockScroll } from "@js/shared";
+import { animateOpen, animateClose } from "./animation.js";
 
 export function createMenuController({
   menu,
@@ -9,47 +10,23 @@ export function createMenuController({
   let isClosing = false;
 
   function setExpanded(expanded) {
-    menuButton.setAttribute(
-      "aria-expanded",
-      String(expanded)
-    );
-  }
-
-  function focusFirstLink() {
-    firstLink.focus();
+    menuButton.setAttribute("aria-expanded", String(expanded));
   }
 
   function restoreFocus() {
     menuButton.focus();
   }
 
-  function finishClose() {
-    if (!menu.open) {
-      return;
-    }
-
-    menu.close();
-    restoreFocus();
-    isClosing = false;
-  }
-
   function openMenu() {
-    if (isDesktop()) {
-      return;
-
-    }
-
-    if (menu.open || isClosing) {
+    if (isDesktop() || menu.open || isClosing) {
       return;
     }
 
     menu.showModal();
-    
-    requestAnimationFrame(() => {
-      menu.getBoundingClientRect();
-      menu.classList.add("animate");
 
-      focusFirstLink();
+    animateOpen({
+      menu,
+      firstLink,
     });
 
     setExpanded(true);
@@ -57,48 +34,28 @@ export function createMenuController({
     lockScroll();
   }
 
-  function closeMenu() {
+  async function closeMenu() {
     if (!menu.open || isClosing) {
       return;
     }
 
     isClosing = true;
-
     setExpanded(false);
 
-    unlockScroll();
+    try {
+      await animateClose(menu, menuContent);
 
-    menu.classList.remove("animate");
-
-    if (prefersReducedMotion()) {
-      finishClose();
-      return;
+      menu.close();
+      unlockScroll();
+      restoreFocus();
+    } finally {
+      isClosing = false;
     }
-
-    const handleTransitionEnd = (event) => {
-      if (event.target !== menuContent) {
-        return;
-      }
-
-      menuContent.removeEventListener(
-        "transitionend",
-        handleTransitionEnd
-      );
-
-      finishClose();
-    };
-
-    menuContent.addEventListener(
-      "transitionend",
-      handleTransitionEnd
-    );
   }
 
-  function toggleMenu() {
-    menu.open
-      ? closeMenu()
-      : openMenu();
-  }
+function toggleMenu() {
+  menu.open ? closeMenu() : openMenu();
+}
 
   return {
     toggleMenu,
