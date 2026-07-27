@@ -17,14 +17,14 @@ export function createMenuController({
     menuButton.focus();
   }
 
-  function openMenu() {
+  async function openMenu() {
     if (isDesktop() || menu.open || isClosing) {
       return;
     }
 
     menu.showModal();
 
-    animateOpen({
+    await animateOpen({
       menu,
       firstLink,
     });
@@ -53,9 +53,9 @@ export function createMenuController({
     }
   }
 
-function toggleMenu() {
-  menu.open ? closeMenu() : openMenu();
-}
+  async function toggleMenu() {
+    menu.open ? await closeMenu() : await openMenu();
+  }
 
   return {
     toggleMenu,

@@ -1,52 +1,68 @@
-/* rubik-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/bookmark-landing-page/assets/fonts/rubik-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* rubik-italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 400;
-  src: url('/bookmark-landing-page/assets/fonts/rubik-v31-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* rubik-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/bookmark-landing-page/assets/fonts/rubik-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* rubik-500italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 500;
-  src: url('/bookmark-landing-page/assets/fonts/rubik-v31-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+@layer base {
+  /* rubik-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/bookmark-landing-page/assets/fonts/rubik-v31-latin-regular.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* rubik-italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: italic;
+    font-weight: 400;
+    src: url("/bookmark-landing-page/assets/fonts/rubik-v31-latin-italic.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* rubik-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/bookmark-landing-page/assets/fonts/rubik-v31-latin-500.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* rubik-500italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Rubik";
+    font-style: italic;
+    font-weight: 500;
+    src: url("/bookmark-landing-page/assets/fonts/rubik-v31-latin-500italic.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 
-summary {
-  @apply list-none cursor-pointer;
-}
+  summary {
+    @apply list-none cursor-pointer;
+  }
 
-summary::marker {
-  @apply after:content-[''];
-}
+  summary::marker {
+    @apply after:content-[''];
+  }
 
-summary::-webkit-details-marker {
-  @apply hidden;
-}
+  summary::-webkit-details-marker {
+    @apply hidden;
+  }
 
-dialog {
-  @apply fixed inset-0 inline-full block-dvh m-0 p-0 border-none max-inline-none max-block-0 overflow-hidden;
-}
+  dialog {
+    @apply fixed inset-0 inline-full block-dvh m-0 p-0 border-none max-inline-none max-block-0 overflow-hidden;
+  }
 
-dialog::backdrop {
-  @apply bg-dialog-backdrop/95;
+  dialog::backdrop {
+    @apply bg-dialog-backdrop/95;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition-duration: 0ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }

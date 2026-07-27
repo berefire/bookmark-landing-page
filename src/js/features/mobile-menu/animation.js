@@ -1,19 +1,31 @@
-import { waitTransition, prefersReducedMotion } from "@js/shared";
-
-export async function animateClose(menu, menuContent) {
-  menu.classList.remove("animate");
-  if (!prefersReducedMotion()) {
-    await waitTransition(menuContent, "translate");
-  }
-}
+import {
+  prefersReducedMotion,
+  waitTransition,
+} from "@js/shared";
 
 export function animateOpen({
   menu,
   firstLink,
 }) {
+  firstLink.focus();
+
+  if (prefersReducedMotion()) {
+    menu.classList.add("animate");
+    return;
+  }
+
   requestAnimationFrame(() => {
     menu.getBoundingClientRect();
     menu.classList.add("animate");
-    firstLink.focus();
   });
+}
+
+export async function animateClose(menu, menuContent) {
+  menu.classList.remove("animate");
+
+  if (prefersReducedMotion()) {
+    return;
+  }
+
+  await waitTransition(menuContent, "translate");
 }

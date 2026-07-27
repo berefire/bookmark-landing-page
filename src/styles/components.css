@@ -211,10 +211,4 @@
   .attribution {
     @apply text-center text-white text-xs;
   }
-
-  @media (prefers-reduced-motion: reduce) {
-    .tab span::after {
-      @apply transition-none;
-    }
-  }
 }
