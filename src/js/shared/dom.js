@@ -13,6 +13,11 @@ const SELECTORS = {
   featureTitle: "[data-feature-title]",
   featureDescription: "[data-feature-description]",
   featureImage: "[data-feature-image]",
+
+  // FAQ
+  faqItems: "[data-faq-item]",
+  faqQuestions: "[data-faq-question]",
+  faqAnswers: "[data-faq-answer]",
 };
 
 function isCollection(value) {
@@ -77,6 +82,10 @@ function initDOMElements() {
     featureTitle: document.querySelector("[data-feature-title]"),
     featureDescription: document.querySelector("[data-feature-description]"),
     featureImage: document.querySelector("[data-feature-image]"),
+
+    faqItems: document.querySelectorAll(SELECTORS.faqItems),
+    faqQuestions: document.querySelectorAll("[data-faq-question]"),
+    faqAnswers: document.querySelectorAll(SELECTORS.faqAnswers),
   };
 
   Object.entries(DOM).forEach(([key, element]) => {

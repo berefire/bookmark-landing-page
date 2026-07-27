@@ -123,13 +123,15 @@
 
           <div class="relative pb-12 md:pb-16 lg:flex-1">
 
-            <div class="absolute left-0 bottom-0 w-[80%] md:w-[85%] lg:w-[88%] h-[78%] rounded-br-full rounded-tr-full bg-primary"
+            <div
+              class="absolute left-0 bottom-0 w-[80%] md:w-[85%] lg:w-[88%] h-[78%] rounded-br-full rounded-tr-full bg-primary"
               aria-hidden="true">
             </div>
 
             <img src="/assets/images/illustration-features-tab-1.svg"
               alt="Illustration of a person using a computer to manage bookmarks" width="536" height="346"
-              class="relative z-10 mx-auto md:mx-0 md:mr-15.5 lg:mr-0 md:ms-auto px-3 md:px-0  w-[85%] h-auto" data-feature-image/>
+              class="relative z-10 mx-auto md:mx-0 md:mr-15.5 lg:mr-0 md:ms-auto px-3 md:px-0  w-[85%] h-auto"
+              data-feature-image />
           </div>
 
           <div
@@ -228,32 +230,40 @@
         </p>
       </div>
       <div class="flex flex-col">
-        <details class="faq-item">
-          <summary class="faq-question">What is Bookmark?</summary>
-          <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
-            ultricies fringilla.
-            Phasellus blandit ipsum quis quam ornare mattis.</p>
+        <details class="faq-item" data-faq-item>
+          <summary class="faq-question" data-faq-question>What is Bookmark?</summary>
+          <div class="faq-answer" data-faq-answer>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
+              ultricies fringilla.
+              Phasellus blandit ipsum quis quam ornare mattis.</p>
+          </div>
         </details>
-        <details class="faq-item">
-          <summary class="faq-question">How can I request a new browser?</summary>
-          <p class="faq-answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
-            ligula. Suspendisse
-            imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
-            ligula. Suspendisse imperdiet.</p>
+        <details class="faq-item" data-faq-item>
+          <summary class="faq-question" data-faq-question>How can I request a new browser?</summary>
+          <div class="faq-answer" data-faq-answer>
+            <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+              ligula. Suspendisse
+              imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+              ligula. Suspendisse imperdiet.</p>
+          </div>
         </details>
-        <details class="faq-item">
-          <summary class="faq-question">Is there a mobile app?</summary>
-          <p class="faq-answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
-            condimentum urna
-            vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et
-            ultricies bibendum.</p>
+        <details class="faq-item" data-faq-item>
+          <summary class="faq-question" data-faq-question>Is there a mobile app?</summary>
+          <div class="faq-answer" data-faq-answer>
+            <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
+              condimentum urna
+              vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et
+              ultricies bibendum.</p>
+          </div>
         </details>
-        <details class="faq-item">
-          <summary class="faq-question">What about other Chromium browsers?</summary>
-          <p class="faq-answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui.
-            Aliquam vitae neque
-            eget nisl gravida pellentesque non ut velit.</p>
+        <details class="faq-item" data-faq-item>
+          <summary class="faq-question" data-faq-question>What about other Chromium browsers?</summary>
+          <div class="faq-answer" data-faq-answer>
+            <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui.
+              Aliquam vitae neque
+              eget nisl gravida pellentesque non ut velit.</p>
+          </div>
         </details>
       </div>
       <a href="#" class="flex justify-center"><span class="btn btn-primary">More Info</span></a>
@@ -357,7 +367,8 @@
               </g>
             </svg>
           </a>
-          <button type="button" aria-label="Close mobile menu" class="cursor-pointer text-white hover:text-red-400" data-mobile-menu-close>
+          <button type="button" aria-label="Close mobile menu" class="cursor-pointer text-white hover:text-red-400"
+            data-mobile-menu-close>
             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="15">
               <path fill="currentColor" fill-rule="evenodd"
                 d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z" />

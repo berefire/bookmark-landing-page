@@ -145,8 +145,12 @@
     @apply rotate-180 bg-red-400;
   }
 
+  .faq-item[open] .faq-answer {
+    @apply opacity-100;
+  }
+
   .faq-answer {
-    @apply pbs-4 font-light leading-loose text-slate-400;
+    @apply pbs-4 font-light leading-loose text-slate-400 h-0 overflow-hidden opacity-0 transition-[height,opacity] duration-300 ease-out;
   }
 
   .form-field {
