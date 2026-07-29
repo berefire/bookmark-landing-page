@@ -20,5 +20,12 @@ export const REQUIRED_ELEMENTS = [
     // FAQ
     "faqItems",
     "faqQuestions",
-    "faqAnswers"
+    "faqAnswers",
+
+    // Contact Form
+    "contactForm",
+    "contactField",
+    "contactInput",
+    "contactError",
+    "contactErrorIcon"
 ];

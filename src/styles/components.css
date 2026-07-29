@@ -165,27 +165,47 @@
   }
 
   .form-field {
-    @apply w-full md:flex-3;
+    @apply w-full md:flex-3 relative;
   }
 
   .form-field--error {
     @apply rounded-[0.3125rem] bg-red-400 p-0.5;
   }
 
+  .form-field--error .form-input {
+    @apply text-red-400;
+  }
+
   .form-input-wrapper {
-    @apply relative;
+    @apply relative rounded-[0.3125rem] bg-white;
   }
 
   .form-input {
-    @apply w-full rounded-[0.3125rem] bg-white py-2.5 px-6 placeholder:text-slate-400;
+    @apply appearance-none w-full rounded-[0.3125rem] bg-transparent py-2.5 px-6 placeholder:text-slate-400 text-slate-400 leading-loose h-12;
+  }
+
+  .form-input:focus-visible {
+    @apply outline-none ring-2 ring-blue-700 ring-offset-2 ring-offset-white;
   }
 
   .form-input__icon {
-    @apply absolute right-4 top-1/2 -translate-y-1/2;
+    @apply absolute right-4 top-1/2 -translate-y-1/2 transition-all duration-200;
   }
 
   .form-error {
-    @apply px-4 pt-1 pb-1 text-xs italic font-medium text-white tracking-[0.015625em] leading-[1.2];
+    @apply py-1 ps-2 text-xs italic font-medium text-white tracking-[0.015625em] leading-[1.2] transition-all duration-200;
+  }
+
+  .form-error--hidden {
+    @apply opacity-0 -translate-y-1 pointer-events-none;
+  }
+
+  .form-icon--hidden {
+    @apply opacity-0 scale-90;
+  }
+
+  .form-field--shake {
+    @apply animate-shake;
   }
 
   .dialog[open] {

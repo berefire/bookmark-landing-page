@@ -19,6 +19,13 @@ const SELECTORS = {
   faqItems: "[data-faq-item]",
   faqQuestions: "[data-faq-question]",
   faqAnswers: "[data-faq-answer]",
+
+  // Contact Form
+  contactForm: "[data-contact-form]",
+  contactField: "[data-contact-field]",
+  contactInput: "[data-contact-input]",
+  contactError: "[data-contact-error]",
+  contactErrorIcon: "[data-contact-error-icon]",
 };
 
 function isCollection(value) {
@@ -88,6 +95,12 @@ function initDOMElements() {
     faqItems: document.querySelectorAll(SELECTORS.faqItems),
     faqQuestions: document.querySelectorAll("[data-faq-question]"),
     faqAnswers: document.querySelectorAll(SELECTORS.faqAnswers),
+
+    contactForm: document.querySelector(SELECTORS.contactForm),
+    contactField: document.querySelector(SELECTORS.contactField),
+    contactInput: document.querySelector(SELECTORS.contactInput),
+    contactError: document.querySelector(SELECTORS.contactError),
+    contactErrorIcon: document.querySelector(SELECTORS.contactErrorIcon),
   };
 
   Object.entries(DOM).forEach(([key, element]) => {

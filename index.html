@@ -277,19 +277,19 @@
           class="md:w-[25ch] text-center font-medium text-2xl md:text-[2rem] md:leading-tight md:tracking-[-0.00625em] text-white">
           Stay up-to-date with what we’re doing</h2>
       </div>
-      <form class="flex flex-col md:flex-row items-start gap-4 md:w-110.5 md:mx-auto" novalidate>
-        <div class="form-field form-field--error">
+      <form class="flex flex-col md:flex-row items-start gap-4 md:w-110.5 md:mx-auto" novalidate data-contact-form>
+        <div class="form-field" data-contact-field>
           <label for="email-address" class="sr-only">Email address</label>
           <div class="form-input-wrapper">
             <input type="email" id="email-address" name="email-address" aria-describedby="error-email"
               placeholder="Enter your email address" autocomplete="email" inputmode="email" required
-              class="form-input" />
-            <img src="/assets/icons/icon-error.svg" alt="" class="form-input__icon" />
+              class="form-input" data-contact-input/>
+            <img src="/assets/icons/icon-error.svg" alt="" class="form-input__icon form-icon--hidden" data-contact-error-icon/>
           </div>
-          <p id="error-email" role="alert" class="form-error">Whoops, make sure it's an email</p>
+          <p id="error-email" role="alert" class="form-error form-error--hidden" data-contact-error></p>
         </div>
         <button type="submit"
-          class="bg-red-400 leading-loose p-4 md:py-2.5 md:px-6 rounded-[0.3125rem] md:flex-1 w-full text-white font-medium md:text-[0.875rem] md:tracking-[0.0156em] hover:bg-white hover:text-red-400 hover:border-2 hover:border-red-400">Contact
+          class="h-12 appearence-none bg-red-400 leading-loose p-4 md:py-2.5 md:px-6 rounded-[0.3125rem] md:flex-1 w-full text-white font-medium md:text-[0.875rem] md:tracking-[0.0156em] hover:bg-white hover:text-red-400 hover:border-2 hover:border-red-400 cursor-pointer">Contact
           Us</button>
       </form>
     </section>
