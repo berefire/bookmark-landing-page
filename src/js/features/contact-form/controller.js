@@ -15,18 +15,14 @@ export function createContactController({
   function submit(event) {
 
     event.preventDefault();
-
     const result = validateEmail(input.value);
 
     if (!result.isValid) {
-
       error.textContent = result.message;
-
       input.setAttribute(
         "aria-invalid",
         "true"
       );
-
       showErrorAnimation({
         field,
         error,
@@ -37,15 +33,12 @@ export function createContactController({
     }
 
     input.removeAttribute("aria-invalid");
-
     hideErrorAnimation({
       field,
       error,
       icon,
     });
-
-    console.log("Enviar formulario");
-
+    input.value = "";
   }
 
   function validateOnInput() {
@@ -53,9 +46,7 @@ export function createContactController({
     const result = validateEmail(input.value);
 
     if (result.isValid) {
-
       input.removeAttribute("aria-invalid");
-
       hideErrorAnimation({
         field,
         error,

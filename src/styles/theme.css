@@ -13,19 +13,19 @@
     }
 
     20% {
-      transform: translateX(-4px);
+      transform: translateX(-0.25rem);
     }
 
     40% {
-      transform: translateX(4px);
+      transform: translateX(0.25rem);
     }
 
     60% {
-      transform: translateX(-3px);
+      transform: translateX(-0.1875rem);
     }
 
     80% {
-      transform: translateX(3px);
+      transform: translateX(0.1875rem);
     }
   }
 }
