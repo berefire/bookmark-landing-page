@@ -1,125 +1,235 @@
 # Frontend Mentor - Bookmark landing page solution
 
-This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+![GitHub last commit](https://img.shields.io/github/last-commit/berefire/bookmark-landing-page)
+![Repo size](https://img.shields.io/github/repo-size/berefire/bookmark-landing-page)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Semantic HTML](https://img.shields.io/badge/Semantic%20HTML-ff9800?style=for-the-badge)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+[![Frontend Mentor](https://img.shields.io/badge/Frontend%20Mentor-3e54a3?style=for-the-badge&logo=frontendmentor&logoColor=white)](https://www.frontendmentor.io/)
+![Architecture - Feature-Based](https://img.shields.io/badge/Architecture-Feature--Based-2563EB?style=for-the-badge)
+![Build Tool - Vite](https://img.shields.io/badge/Build%20Tool-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Accessibility](https://img.shields.io/badge/Accessibility-A11Y-0052cc?style=for-the-badge)
+![Responsive Layout](https://img.shields.io/badge/Responsive%20Layout-Full%20Support-blue?style=for-the-badge)
+![Mobile First](https://img.shields.io/badge/Mobile--First-Design-orange?style=for-the-badge)
+[![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
+
+This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+---
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The Challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+- [My Process](#️my-process)
+  - [Built With](#built-with)
+  - [Architecture](#architecture)
+  - [Accessibility](#accessibility)
+  - [What I Learned](#what-i-learned)
+  - [Continued Development](#continued-development)
+  - [Useful Resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+---
 
-## Overview
+## 📖Overview
 
 ### The challenge
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Receive an error message when the newsletter form is submitted if:
-  - The input field is empty
-  - The email address is not formatted correctly
+- View the optimal layout for the interface depending on their device's screen size.
+- See hover and focus states for all interactive elements.
+- Navigate the interface using only the keyboard.
+- Interact with accessible tabs and mobile navigation.
+- Receive validation feedback when submitting the newsletter form with:
+  - An empty email address.
+  - An invalid email format.
 
-### Screenshot
+---
+
+### 📸Screenshot
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+---
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
-### Links
+### 🔗Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## My process
+---
+
+## ⚙️My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- Semantic HTML5
+- Tailwind CSS v4
+- Vanilla JavaScript (ES Modules)
+- Vite
+- Mobile-first workflow
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- CSS Custom Properties
+- Accessible HTML and ARIA
+- Conventional Commits
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+---
 
-### What I learned
+## 🔎Architecture
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+The project follows a modular structure that separates styling, components, and JavaScript responsibilities.
 
-To see how you can add code snippets, see below:
+### CSS
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```tree
+src/styles/
+├── base.css
+├── components.css
+├── theme.css
+└── utilities.css
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+
+### JavaScript
+
+```tree
+src/js/
+├── data/
+├── features/
+|       ├── contact-form/
+|       ├── faq/
+|       ├── mobile-menu/
+|       └── tab/
+├── shared/
+└── main.js
 ```
+
+Each feature is organized using small, focused modules to improve maintainability and scalability.
+
+---
+
+## ♿Accessibility
+
+Accessibility was one of the main goals of this project.
+
+Implemented improvements include:
+
+- Semantic HTML landmarks.
+- Accessible mobile navigation using the `<dialog>` element.
+- Keyboard-friendly navigation.
+- Visible custom focus styles.
+- Accessible tabs using WAI-ARIA Authoring Practices.
+- Proper form labels and validation feedback.
+- Decorative SVGs hidden from assistive technologies.
+- Descriptive alternative text for meaningful images.
+- Accessible social media links.
+- Reduced motion support.
+
+---
+
+## 💡What I learned
+
+This project helped me improve several frontend development skills.
+
+### Building accessible interfaces
+
+I gained a much deeper understanding of semantic HTML and ARIA by implementing:
+
+- Accessible tabs.
+- Mobile dialogs.
+- Keyboard navigation.
+- Form validation.
+- Focus management.
+
+### Organizing JavaScript
+
+Instead of writing all logic in a single file, I learned how to separate responsibilities into controllers, events, animations, validation, and DOM helpers.
+
+Example:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+createFaqController({
+  faqItems,
+  faqAnswers,
+});
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+This approach makes each feature easier to understand and maintain.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+### Tailwind CSS v4.3.2
 
-### Continued development
+This was also an opportunity to explore Tailwind CSS v4.3.2 beyond utility classes by organizing:
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Components
+- Theme tokens
+- Utilities
+- Reusable focus-ring utilities
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+which resulted in a cleaner styling architecture.
 
-### Useful resources
+---
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+### 🚀Continued development
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+For future projects I would like to continue improving:
 
-### AI Collaboration
+- Advanced accessibility patterns.
+- Component architecture.
+- JavaScript design patterns.
+- Performance optimization.
+- Automated testing.
+- Web accessibility auditing.
+- SEO best practices.
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+---
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+### 📚Useful resources
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+- Frontend Mentor — <https://www.frontendmentor.io/>
+- MDN Web Docs — <https://developer.mozilla.org/>
+- Tailwind CSS Documentation — <https://tailwindcss.com/docs>
+- Vite Documentation — <https://vite.dev/guide/>
+- WAI-ARIA Authoring Practices Guide (APG) — <https://www.w3.org/WAI/ARIA/apg/>
 
-## Author
+---
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+## 🤖AI Collaboration
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+AI was used as a development assistant throughout this project rather than as a code generator.
 
-## Acknowledgments
+It helped with:
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- Reviewing semantic HTML.
+- Improving accessibility.
+- Suggesting better project architecture.
+- Organizing Tailwind CSS.
+- Reviewing JavaScript structure.
+- Debugging.
+- Refining commit messages.
+- Improving SEO metadata.
+- Writing documentation.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Every suggestion was reviewed, adapted, and integrated manually to ensure I fully understood the implementation and maintained complete control over the final solution.
+
+---
+
+## 👤Author
+
+- Frontend Mentor - [@berefire](https://www.frontendmentor.io/profile/berefire)
+- GitHub - [@berefire](https://github.com/berefire)
+
+---
+
+## 🙏Acknowledgments
+
+Thanks to Frontend Mentor for providing practical challenges that help developers improve real-world frontend skills.
+
+---
