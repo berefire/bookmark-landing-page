@@ -56,14 +56,30 @@ Users should be able to:
 
 ### 📸Screenshot
 
-![](./screenshot.jpg)
+#### Mobile (375x914)
+
+| _Main_ | _Menu_ | _Menu Active_ |
+| ------ | ------ | ------------- |
+| ![Mobile](./docs/screenshots/mobile.png) | ![Mobile Menu](./docs/screenshots/mobile-menu.png) | ![Mobile Menu Active](./docs/screenshots/mobile-menu-active.png) |  
+
+#### Tablet (768x914)
+
+| _Main_ | _Menu_ | _Menu Active_ |
+| ------ | ------ | ------------- |
+| ![Tablet](./docs/screenshots/tablet.png) | ![Tablet Menu](./docs/screenshots/tablet-menu.png) | ![Tablet Menu Active](./docs/screenshots/tablet-menu-active.png) |  
+
+#### Desktop (1440x914)
+
+| _Main_ | _Active_ |
+| ------ | -------- |
+| ![Desktop](./docs/screenshots/desktop.png) | ![Desktop Active](./docs/screenshots/desktop-active.png) |
 
 ---
 
 ### 🔗Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://berefire.github.io/bookmark-landing-page/](https://berefire.github.io/bookmark-landing-page/)
 
 ---
 
@@ -72,7 +88,7 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5
-- Tailwind CSS v4
+- Tailwind CSS v4.3.2
 - Vanilla JavaScript (ES Modules)
 - Vite
 - Mobile-first workflow
