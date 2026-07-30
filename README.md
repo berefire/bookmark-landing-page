@@ -78,7 +78,7 @@ Users should be able to:
 
 ### 🔗Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/accessible-bookmark-landing-page-with-tailwind-css-v432-XYRuZiF1gA](https://www.frontendmentor.io/solutions/accessible-bookmark-landing-page-with-tailwind-css-v432-XYRuZiF1gA)
 - Live Site URL: [https://berefire.github.io/bookmark-landing-page/](https://berefire.github.io/bookmark-landing-page/)
 
 ---
