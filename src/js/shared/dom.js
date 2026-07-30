@@ -1,110 +1,47 @@
-import { REQUIRED_ELEMENTS } from "@js/shared/constants.js";
+import { DOM_REQUIREMENTS } from "./constants.js";
+import { SELECTORS } from "./selectors.js";
+import { isValidElement } from "./utils.js";
 
-const SELECTORS = {
+const QUERY_TYPES = {
   // Mobile menu
-  mobileNavButton: "[data-mobile-menu-open]",
-  mobileCloseButton: "[data-mobile-menu-close]",
-  mobileNav: "[data-mobile-menu]",
-  mobileNavContent: "[data-mobile-menu-content]",
-  mobileNavLinks: "[data-mobile-menu-link]",
+  mobileNavButton: "one",
+  mobileCloseButton: "one",
+  mobileNav: "one",
+  mobileNavContent: "one",
+  mobileNavLinks: "all",
 
-  // Features Tab
-  featuresTabButtons: "[data-tab]",
-  featureTitle: "[data-feature-title]",
-  featureDescription: "[data-feature-description]",
-  featureImage: "[data-feature-image]",
-  featureButton: "[data-feature-button]",
+  // Features
+  featuresTabButtons: "all",
+  featureTitle: "one",
+  featureDescription: "one",
+  featureImage: "one",
+  featureButton: "one",
 
   // FAQ
-  faqItems: "[data-faq-item]",
-  faqQuestions: "[data-faq-question]",
-  faqAnswers: "[data-faq-answer]",
+  faqItems: "all",
+  faqQuestions: "all",
+  faqAnswers: "all",
 
   // Contact Form
-  contactForm: "[data-contact-form]",
-  contactField: "[data-contact-field]",
-  contactInput: "[data-contact-input]",
-  contactError: "[data-contact-error]",
-  contactErrorIcon: "[data-contact-error-icon]",
+  contactForm: "one",
+  contactField: "one",
+  contactInput: "one",
+  contactError: "one",
+  contactErrorIcon: "one",
 };
 
-function isCollection(value) {
-  return value instanceof NodeList || value instanceof HTMLCollection;
-}
-
-function isValidElement(value) {
-  if (value instanceof Element) {
-    return true;
-  }
-
-  if (isCollection(value)) {
-    return value.length > 0;
-  }
-
-  return false;
-}
-
-/**
- * Returns the first element of a collection.
- * Returns null when the collection is empty.
- */
-export function getFirstElement(collection) {
-  if (!isCollection(collection)) {
-    throw new Error(
-      `[DOM] getFirstElement expects a NodeList or HTMLCollection`,
-    );
-  }
-
-  return collection[0] ?? null;
-}
-
-export function addSafeEventListener(
-  element,
-  event,
-  handler,
-  context = "unknown",
-) {
-  if (!isValidElement(element)) {
-    throw new Error(
-      `[${context}] Invalid element passed to addSafeEventListener: ${element}`,
-    );
-  }
-
-  if (isCollection(element)) {
-    Array.from(element).forEach((el) => el.addEventListener(event, handler));
-    return;
-  }
-
-  element.addEventListener(event, handler);
-}
-
 function initDOMElements() {
-  const DOM = {
-    mobileNavButton: document.querySelector(SELECTORS.mobileNavButton),
-    mobileCloseButton: document.querySelector(SELECTORS.mobileCloseButton),
-    mobileNav: document.querySelector(SELECTORS.mobileNav),
-    mobileNavContent: document.querySelector(SELECTORS.mobileNavContent),
-    mobileNavLinks: document.querySelectorAll(SELECTORS.mobileNavLinks),
-
-    featuresTabButtons: document.querySelectorAll("[data-tab]"),
-    featureTitle: document.querySelector(SELECTORS.featureTitle),
-    featureDescription: document.querySelector(SELECTORS.featureDescription),
-    featureImage: document.querySelector(SELECTORS.featureImage),
-    featureButton: document.querySelector(SELECTORS.featureButton),
-
-    faqItems: document.querySelectorAll(SELECTORS.faqItems),
-    faqQuestions: document.querySelectorAll("[data-faq-question]"),
-    faqAnswers: document.querySelectorAll(SELECTORS.faqAnswers),
-
-    contactForm: document.querySelector(SELECTORS.contactForm),
-    contactField: document.querySelector(SELECTORS.contactField),
-    contactInput: document.querySelector(SELECTORS.contactInput),
-    contactError: document.querySelector(SELECTORS.contactError),
-    contactErrorIcon: document.querySelector(SELECTORS.contactErrorIcon),
-  };
+  const DOM = Object.fromEntries(
+    Object.entries(SELECTORS).map(([key, selector]) => [
+      key,
+      QUERY_TYPES[key] === "all"
+        ? document.querySelectorAll(selector)
+        : document.querySelector(selector),
+    ]),
+  );
 
   Object.entries(DOM).forEach(([key, element]) => {
-    const isRequired = REQUIRED_ELEMENTS.includes(key);
+    const isRequired = Object.values(DOM_REQUIREMENTS).flat().includes(key);
 
     if (isRequired && !isValidElement(element)) {
       throw new Error(

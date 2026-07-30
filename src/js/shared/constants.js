@@ -2,30 +2,26 @@ export const BREAKPOINTS = {
     desktop: "64em"
 };
 
-export const REQUIRED_ELEMENTS = [
-    // Mobile menu
+export const DOM_REQUIREMENTS = {
+  mobileMenu: [
+    "mobileNav",
     "mobileNavButton",
     "mobileCloseButton",
-    "mobileNav",
-    "mobileNavContent",
-    "mobileNavLinks",
+  ],
 
-    // Features Tab
+  tabs: [
     "featuresTabButtons",
-    "featureTitle",
-    "featureDescription",
     "featureImage",
-    "featureButton",
+    "featureTitle",
+  ],
 
-    // FAQ
+  faq: [
     "faqItems",
     "faqQuestions",
-    "faqAnswers",
+  ],
 
-    // Contact Form
+  contact: [
     "contactForm",
-    "contactField",
     "contactInput",
-    "contactError",
-    "contactErrorIcon"
-];
+  ],
+};
