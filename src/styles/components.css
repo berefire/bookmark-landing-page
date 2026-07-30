@@ -185,7 +185,7 @@
   }
 
   .form-input:focus-visible {
-    @apply outline-none ring-2 ring-blue-700 ring-offset-2 ring-offset-white;
+    @apply outline-2 outline-offset-2 outline-white;
   }
 
   .form-input__icon {

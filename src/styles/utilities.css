@@ -17,4 +17,16 @@
   .u-no-scroll {
     @apply overflow-hidden overscroll-none;
   }
+
+  .focus-ring-primary:focus-visible {
+    @apply outline-2 outline-offset-2 rounded-md outline-primary;
+  }
+
+  .focus-ring-red-400:focus-visible {
+    @apply outline-2 outline-offset-2 rounded-md outline-red-400;
+  }
+
+  .focus-ring-white:focus-visible {
+    @apply outline-2 outline-offset-2 rounded-md outline-white;
+  }
 }
