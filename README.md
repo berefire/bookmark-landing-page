@@ -107,11 +107,12 @@ The project follows a modular structure that separates styling, components, and 
 ### CSS
 
 ```tree
-src/styles/
-├── base.css
-├── components.css
-├── theme.css
-└── utilities.css
+src/styles
+├── theme.css        // Design tokens and theme variables
+├── base.css         // Global styles and element defaults
+├── components.css   // Reusable UI components
+├── utilities.css    // Custom utility classes
+└── input.css        // Tailwind entry point
 ```
 
 ### JavaScript
