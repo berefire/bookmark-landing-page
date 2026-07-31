@@ -27,5 +27,5 @@ export async function animateClose(menu, menuContent) {
     return;
   }
 
-  await waitTransition(menuContent, "translate");
+  await waitTransition(menuContent, "transform");
 }
