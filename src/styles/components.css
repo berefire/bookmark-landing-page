@@ -125,11 +125,7 @@
   }
 
   .card__logo {
-    @apply flex h-25 md:h-17.5 md:w-18 items-center justify-center;
-  }
-
-  .card__logo img {
-    @apply h-full w-auto;
+    @apply flex h-25 md:h-17.5 md:w-18 lg:w-25 lg:h-auto items-center justify-center;
   }
 
   .faq-item:first-child {
