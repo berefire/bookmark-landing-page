@@ -15,10 +15,14 @@ export function isValidElement(value) {
 }
 
 /**
- * Returns the first element of a collection.
+ * Returns the first element of a NodeList or HTMLCollection.
  *
- * @throws {Error} If the provided value is not an array or NodeList.
- * @returns {Element|null} The first element, or null if the collection is empty.
+ * Throws if the provided value is not a collection.
+ * Returns null when the collection is empty.
+ *
+ * @param {NodeList|HTMLCollection} collection
+ * @returns {Element|null}
+ * @throws {Error}
  */
 
 export function getFirstElement(collection) {
