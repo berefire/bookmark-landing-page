@@ -36,7 +36,7 @@ export function createTabController({
   function updateTabs(activeTabId) {
     tabs.forEach( tab => {
         const isActive = tab.dataset.tab === activeTabId;
-        tab.setAttribute("aria-selected", isActive);
+        tab.setAttribute("aria-selected", isActive ? "true" : "false");
     });
   }
 
