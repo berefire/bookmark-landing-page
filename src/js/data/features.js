@@ -11,7 +11,6 @@ export const FEATURES = [
   },
   {
     id: "searching",
-    tab: "Speedy Searching",
     title: "Intelligent search",
     description:
       "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
@@ -20,7 +19,6 @@ export const FEATURES = [
   },
   {
     id: "sharing",
-    tab: "Easy Sharing",
     title: "Share your bookmarks",
     description:
       "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
