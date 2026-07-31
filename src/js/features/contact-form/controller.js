@@ -5,7 +5,7 @@ import {
   hideErrorAnimation,
 } from "./animation.js";
 
-export function createContactController({
+export function createContactFormController({
   field,
   input,
   error,

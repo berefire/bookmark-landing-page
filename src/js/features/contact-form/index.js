@@ -1,9 +1,9 @@
 import { DOM } from "@js/shared";
-import { createContactController } from "./controller.js";
+import { createContactFormController } from "./controller.js";
 import { bindContactEvents } from "./events.js";
 
 export function initializeContactForm(){
-    const ContactController = createContactController({
+    const contactFormController = createContactFormController({
         field: DOM.contactField,
         input: DOM.contactInput,
         error: DOM.contactError,
@@ -13,6 +13,6 @@ export function initializeContactForm(){
     bindContactEvents({
         form: DOM.contactForm,
         input: DOM.contactInput,
-        controller: ContactController,
+        controller: contactFormController,
     });
 }
